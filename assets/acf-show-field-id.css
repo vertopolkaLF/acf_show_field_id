@@ -1,0 +1,99 @@
+/* ACF Show Field ID Styles */
+
+/* Universal ACF Label Styling - Works in both editors */
+.acf-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.acf-field-name-tag {
+    font-family: 'SFMono-Regular', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+    border: 1px solid #aaa;
+    background: #eee;
+    border-radius: 4px;
+    line-height: 1;
+    font-size: 12px;
+    padding: 2px 4px;
+    cursor: pointer;
+    transition: .2s;
+    position: relative;
+}
+
+.acf-field-name-tag:hover {
+    border-color: #2271b1;
+    background: #2271b133;
+    color: #2271b1;
+}
+
+.acf-field-name-tag::after {
+    content: 'Click to copy';
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 6px 8px;
+    border-radius: 100px;
+    font-size: 11px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+    white-space: nowrap;
+    z-index: 1000;
+}
+
+.acf-field-name-tag:hover::after {
+    opacity: 1;
+    top: -180%;
+}
+
+/* Copy success state */
+.acf-field-name-tag-copied::after {
+    content: 'Copied!' !important;
+    background: #28a745 !important;
+    opacity: 1 !important;
+    top: -180% !important;
+}
+
+
+.post-php .acf-label,
+.post-new-php .acf-label,
+.edit-php .acf-label {
+    align-items: flex-start;
+}
+
+/* Gutenberg editor specific adjustments */
+.block-editor-page .acf-label {
+    align-items: center;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .acf-label {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .acf-field-name-tag,
+    .acf-field-name-tag-classic {
+        margin-left: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    .acf-field-id-display {
+        padding: 8px;
+        margin: 8px 0;
+    }
+}
+
+/* Focus states for accessibility */
+.acf-field-name-tag:focus {
+    outline: 2px solid #0073aa;
+    outline-offset: 2px;
+}
