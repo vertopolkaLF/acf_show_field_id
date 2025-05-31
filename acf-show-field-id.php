@@ -4,7 +4,7 @@
  * Plugin Name: ACF Show Field ID
  * Plugin URI: https://github.com/vertopolkalf/acf-show-field-id
  * Description: Shows ACF field names in both Classic and Gutenberg editors
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: vertopolkaLF
  * Author URI: https://vertopolkalf.ru
  * Text Domain: acf-show-field-id
@@ -21,7 +21,7 @@ if (!defined('ABSPATH')) {
 
 // Define plugin version
 if (!defined('ACFSFID_VERSION')) {
-    define('ACFSFID_VERSION', '1.0.0');
+    define('ACFSFID_VERSION', '1.0.1');
 }
 
 if (!defined('ACFSFID_PLUGIN_URL')) {
