@@ -17,9 +17,38 @@
             (typeof wp !== 'undefined' && wp.blocks);
     }
 
+    // Function to check if we're on ACF field group editing page
+    function isACFFieldGroupPage() {
+        // Check URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+
+        // Check if we're editing field groups
+        if (urlParams.get('post_type') === 'acf-field-group') {
+            return true;
+        }
+
+        // Check if we're on field group edit page
+        if (urlParams.get('page') === 'acf-field-group') {
+            return true;
+        }
+
+        // Check body classes
+        if (document.body.classList.contains('post-type-acf-field-group')) {
+            return true;
+        }
+
+        // Check if current page is ACF field group edit
+        if (window.location.href.includes('post_type=acf-field-group') ||
+            window.location.href.includes('page=acf-field-group')) {
+            return true;
+        }
+
+        return false;
+    }
+
     // Main function to add field names to ACF labels
     function addFieldNames() {
-        const acfFields = document.querySelectorAll('.acf-field:not(.acf-field-name-processed)');
+        const acfFields = document.querySelectorAll('.postbox .acf-field:not(.acf-field-name-processed)');
 
         acfFields.forEach(function (field) {
             field.classList.add('acf-field-name-processed');
@@ -181,13 +210,23 @@
     // Initialize when appropriate
     if (typeof wp !== 'undefined' && wp.domReady) {
         // Gutenberg environment
-        wp.domReady(init);
+        wp.domReady(function () {
+            if (!isACFFieldGroupPage()) {
+                init();
+            }
+        });
     } else {
         // Classic editor environment
         if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', init);
+            document.addEventListener('DOMContentLoaded', function () {
+                if (!isACFFieldGroupPage()) {
+                    init();
+                }
+            });
         } else {
-            init();
+            if (!isACFFieldGroupPage()) {
+                init();
+            }
         }
     }
 
