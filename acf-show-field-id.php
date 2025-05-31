@@ -11,7 +11,6 @@
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Requires at least: 5.0
  * Tested up to: 6.4
- * Network: false
  */
 
 // Prevent direct access
@@ -99,7 +98,7 @@ function acfsfid_show_field_id_init()
 function acfsfid_show_field_id_acf_missing_notice()
 {
     $message = esc_html__('ACF Show Field ID: This plugin requires Advanced Custom Fields to be installed and activated.', 'acf-show-field-id');
-    printf('<div class="notice notice-error"><p><strong>%s</strong></p></div>', $message);
+    printf('<div class="notice notice-error"><p><strong>%s</strong></p></div>', esc_html($message));
 }
 
 add_action('plugins_loaded', 'acfsfid_show_field_id_init');
