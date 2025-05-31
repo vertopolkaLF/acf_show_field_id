@@ -33,8 +33,17 @@ class ACFSFID_Show_Field_ID
 
     public function __construct()
     {
+        add_action('init', array($this, 'load_textdomain'));
         add_action('admin_enqueue_scripts', array($this, 'enqueue_scripts'));
         add_action('enqueue_block_editor_assets', array($this, 'enqueue_block_editor_assets'));
+    }
+
+    /**
+     * Load plugin text domain for translations
+     */
+    public function load_textdomain()
+    {
+        load_plugin_textdomain('acf-show-field-id', false, dirname(plugin_basename(__FILE__)) . '/languages');
     }
 
     /**
@@ -51,6 +60,17 @@ class ACFSFID_Show_Field_ID
                 array('jquery'),
                 ACFSFID_VERSION,
                 true
+            );
+
+            // Localize script with translatable strings
+            wp_localize_script(
+                'acf-show-field-id-universal',
+                'acfShowFieldIdData',
+                array(
+                    'clickToCopy' => __('Click to copy', 'acf-show-field-id'),
+                    'copied' => __('Copied!', 'acf-show-field-id'),
+                    'copyFieldName' => __('Click to copy field name', 'acf-show-field-id')
+                )
             );
 
             wp_enqueue_style(
@@ -74,6 +94,17 @@ class ACFSFID_Show_Field_ID
             array('wp-dom-ready', 'wp-blocks', 'wp-element'),
             ACFSFID_VERSION,
             true
+        );
+
+        // Localize script with translatable strings
+        wp_localize_script(
+            'acf-show-field-id-universal',
+            'acfShowFieldIdData',
+            array(
+                'clickToCopy' => __('Click to copy', 'acf-show-field-id'),
+                'copied' => __('Copied!', 'acf-show-field-id'),
+                'copyFieldName' => __('Click to copy field name', 'acf-show-field-id')
+            )
         );
 
         wp_enqueue_style(

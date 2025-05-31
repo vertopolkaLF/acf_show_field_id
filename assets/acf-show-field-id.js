@@ -10,6 +10,19 @@
 (function () {
     'use strict';
 
+    // Get translated strings from WordPress
+    const translations = window.acfShowFieldIdData || {
+        clickToCopy: 'Click to copy',
+        copied: 'Copied!',
+        copyFieldName: 'Click to copy field name'
+    };
+
+    // Set CSS custom properties for tooltips
+    function setCSSVariables() {
+        document.documentElement.style.setProperty('--acf-tooltip-click', `"${translations.clickToCopy}"`);
+        document.documentElement.style.setProperty('--acf-tooltip-copied', `"${translations.copied}"`);
+    }
+
     // Function to detect if we're in Gutenberg
     function isGutenberg() {
         return document.body.classList.contains('block-editor-page') ||
@@ -122,7 +135,7 @@
         const nameTag = document.createElement('span');
         nameTag.className = 'acf-field-name-tag';
         nameTag.textContent = fieldName;
-        nameTag.title = 'Click to copy field name';
+        nameTag.title = translations.copyFieldName;
 
         // Add click handler for copying
         nameTag.addEventListener('click', function (e) {
@@ -184,6 +197,9 @@
     // Initialize the plugin
     function init() {
         console.log('ACF Field Names: Initialized for', isGutenberg() ? 'Gutenberg' : 'Classic editor');
+
+        // Set CSS variables for tooltips
+        setCSSVariables();
 
         // Initial run
         setTimeout(addFieldNames, isGutenberg() ? 1000 : 500);
