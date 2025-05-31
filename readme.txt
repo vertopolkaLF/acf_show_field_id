@@ -1,5 +1,6 @@
 === ACF Show Field ID ===
 Contributors: vertopolkalf
+Donate link: https://boosty.to/vertopolkalf
 Tags: acf, advanced custom fields, editor, gutenberg, admin, 
 Requires at least: 5.0
 Tested up to: 6.8
@@ -61,9 +62,7 @@ Yes, the plugin works with both the free ACF plugin and ACF PRO.
 
 == Screenshots ==
 
-1. Field names displayed in the Classic Editor
-2. Field names shown in Gutenberg Block Editor
-3. Copy to clipboard functionality in action
+1. Field names displayed in the Gutenberg editor
 
 == Changelog ==
 

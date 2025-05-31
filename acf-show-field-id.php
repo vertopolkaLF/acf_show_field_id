@@ -2,6 +2,7 @@
 
 /**
  * Plugin Name: ACF Show Field ID
+ * Plugin URI: https://github.com/vertopolkalf/acf-show-field-id
  * Description: Shows ACF field names in both Classic and Gutenberg editors
  * Version: 1.0.0
  * Author: vertopolkaLF
