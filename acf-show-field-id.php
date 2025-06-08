@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Plugin Name: ACF Show Field ID
- * Plugin URI: https://github.com/vertopolkalf/acf-show-field-id
+ * Plugin Name: Show Field ID for ACF
+ * Plugin URI: https://github.com/vertopolkaLF/acf_show_field_id
  * Description: Shows ACF field names in both Classic and Gutenberg editors
  * Version: 1.0.1
  * Author: vertopolkaLF
@@ -129,7 +129,7 @@ function acfsfid_show_field_id_init()
 // Notice if ACF is not active
 function acfsfid_show_field_id_acf_missing_notice()
 {
-    $message = esc_html__('ACF Show Field ID: This plugin requires Advanced Custom Fields to be installed and activated.', 'acf-show-field-id');
+    $message = esc_html__('Show Field ID for ACF: This plugin requires Advanced Custom Fields to be installed and activated.', 'acf-show-field-id');
     printf('<div class="notice notice-error"><p><strong>%s</strong></p></div>', esc_html($message));
 }
 

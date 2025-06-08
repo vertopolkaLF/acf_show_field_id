@@ -1,4 +1,4 @@
-=== ACF Show Field ID ===
+=== Show Field ID for ACF ===
 Contributors: vertopolkalf
 Donate link: https://boosty.to/vertopolkalf
 Tags: acf, advanced custom fields, editor, gutenberg, admin, 
@@ -13,7 +13,7 @@ Shows ACF field names directly in the admin editor interface for both Classic an
 
 == Description ==
 
-ACF Show Field ID is a developer-friendly plugin that displays Advanced Custom Fields (ACF) field names directly in the WordPress admin interface. This plugin works seamlessly with both the Classic Editor and the new Gutenberg Block Editor.
+Show Field ID for ACF is a developer-friendly plugin that displays Advanced Custom Fields (ACF) field names directly in the WordPress admin interface. This plugin works seamlessly with both the Classic Editor and the new Gutenberg Block Editor.
 
 **Key Features:**
 

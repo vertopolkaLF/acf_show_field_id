@@ -1,8 +1,8 @@
-# Copyright (C) 2024 ACF Show Field ID
-# This file is distributed under the same license as the ACF Show Field ID package.
+# Copyright (C) 2024 Show Field ID for ACF
+# This file is distributed under the same license as the Show Field ID for ACF package.
 msgid ""
 msgstr ""
-"Project-Id-Version: ACF Show Field ID 1.0.1\n"
+"Project-Id-Version: Show Field ID for ACF 1.0.1\n"
 "Report-Msgid-Bugs-To: https://github.com/vertopolkalf/acf-show-field-id\n"
 "POT-Creation-Date: 2024-01-01 00:00+0000\n"
 "PO-Revision-Date: 2025-05-31 05:09+0300\n"
@@ -27,5 +27,5 @@ msgid "Click to copy field name"
 msgstr "Clique para copiar o nome do campo"
 
 #: acf-show-field-id.php
-msgid "ACF Show Field ID: This plugin requires Advanced Custom Fields to be installed and activated."
-msgstr "ACF Show Field ID: Este plugin requer que o Advanced Custom Fields esteja instalado e ativado."
+msgid "Show Field ID for ACF: This plugin requires Advanced Custom Fields to be installed and activated."
+msgstr "Show Field ID for ACF: Este plugin requer que o Advanced Custom Fields esteja instalado e ativado."

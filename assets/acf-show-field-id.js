@@ -1,12 +1,12 @@
 /**
- * ACF Show Field ID - Universal Script
+ * Show Field ID for ACF - Universal Script
  * Works in both Classic and Gutenberg editors
  * 
  * @package ACF_Show_Field_ID
  * @version 1.0.0
  */
 
-// Universal script for ACF Show Field ID - works in both Classic and Gutenberg editors
+// Universal script for Show Field ID for ACF - works in both Classic and Gutenberg editors
 (function () {
     'use strict';
 
@@ -179,7 +179,7 @@
                 showCopySuccess(element);
             }
         } catch (err) {
-            console.log('ACF Show Field ID: Copy failed');
+            console.log('Show Field ID for ACF: Copy failed');
         }
 
         document.body.removeChild(textArea);
