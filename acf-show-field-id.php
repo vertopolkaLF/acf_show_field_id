@@ -7,7 +7,7 @@
  * Version: 1.0.1
  * Author: vertopolkaLF
  * Author URI: https://vertopolkalf.ru
- * Text Domain: acf-show-field-id
+ * Text Domain: show-field-id-for-acf
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Requires at least: 5.0
